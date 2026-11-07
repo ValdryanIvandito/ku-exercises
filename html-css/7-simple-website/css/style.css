@@ -1,0 +1,165 @@
+.row {
+  width: 1080px;
+  margin: 0 auto;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.navigation-bar {
+  padding: 12px 0;
+  background: #fff;
+}
+
+.navigation-bar .navigation-bar-content {
+  float: right;
+}
+
+.navigation-bar-content-menus {
+  float: left;
+}
+
+.navigation-bar .navigation-bar-content-menus ul li {
+  padding: 0 16px;
+  line-height: 44px;
+  font-size: 14px;
+  float: left;
+}
+
+.navigation-bar .navigation-bar-content-menus ul li a {
+  text-decoration: none;
+  color: #1f2937;
+}
+
+.navigation-bar .navigation-bar-content-separator {
+  margin: 0 24px;
+  float: left;
+  width: 1px;
+  height: 44px;
+  background: #e5e7eb;
+}
+
+.navigation-bar .navigation-bar-content-buttons {
+  float: left;
+  padding: 2px 0;
+}
+
+.navigation-bar-content-buttons .button {
+  float: left;
+}
+
+.navigation-bar-content-buttons .button:not(:last-child) {
+  margin-right: 16px;
+}
+
+.section {
+  padding: 60px 0;
+}
+
+.section .section-header {
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 1.1;
+  color: #111827;
+}
+
+.section-hero {
+  padding: 143px 0;
+  color: #fff;
+  background-image: url("../img/bg-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.section-hero .eyebrow {
+  color: inherit;
+}
+
+.section-hero .header {
+  margin-bottom: 18px;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -1%;
+}
+
+.section-hero .description {
+  margin-bottom: 32px;
+}
+
+.section-clients {
+  background: #fff;
+}
+
+.section-clients .header {
+  margin-bottom: 32px;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+  color: #111827;
+}
+
+.section-clients .client-list {
+  margin-right: -2px;
+  margin-left: -2px;
+}
+
+.section-clients .client-list .client-item {
+  float: left;
+  width: 25%;
+  padding: 0 2px;
+}
+
+.section-clients .client-list .client-item .logo-container {
+  padding: 18px 0;
+  background: #f9fafb;
+}
+
+.section-clients .client-list .client-item .logo-container img {
+  display: block;
+  margin: 0 auto;
+}
+
+.section-services {
+  color: #374151;
+}
+
+.section-services .eyebrow {
+  margin-top: 36px;
+}
+
+.section-services .section-header {
+  margin-bottom: 24px;
+}
+
+.section-services .service-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.section-services .service-item::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.section-services .service-item img {
+  float: left;
+  margin-right: 12px;
+}
+
+.section-services .service-item span {
+  float: left;
+  line-height: 24px;
+}
+
+.section-services .description {
+  margin-bottom: 24px;
+}
+
+.section-services .photo-container img {
+  border-radius: 6px;
+}

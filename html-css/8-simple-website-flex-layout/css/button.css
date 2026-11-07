@@ -1,0 +1,23 @@
+.button {
+  padding: 13px 20px;
+  border-radius: 8px;
+  border: 1px solid #1E1E1E;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0;
+  background: #1E1E1E;
+  color: #fff;
+}
+
+.button.small {
+  padding: 9px 16px;
+  font-size: 14px;
+}
+
+.button.outline {
+  border: 1px solid #E5E7EB;
+  background: #fff;
+  color: #1F2937;
+}

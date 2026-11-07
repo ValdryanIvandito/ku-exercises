@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Positioned Layout</title>
+
+    <style>
+      #el1,
+      #el2,
+      #el3 {
+        margin-bottom: 50px;
+        height: 50px;
+        background: skyblue;
+      }
+
+      #el2 {
+        position: relative; /* Positioned layout activated */
+        top: 30px;
+        background: tomato;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="el1"></div>
+    <div id="el2"></div>
+    <div id="el3"></div>
+  </body>
+</html>

@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Flex Grow</title>
+
+    <style>
+      body {
+        padding: 50px;
+        background: black;
+        font-weight: 600;
+        font-size: 32px;
+        color: #fff;
+      }
+
+      .container-note {
+        margin-bottom: 100px;
+      }
+
+      .container1 {
+        display: flex;
+        justify-content: start;
+        width: 1000px;
+        border: 5px solid #fff;
+      }
+
+      .container2 {
+        display: flex;
+        justify-content: center;
+        width: 1000px;
+        border: 5px solid #fff;
+      }
+
+      .container3 {
+        display: flex;
+        justify-content: end;
+        width: 1000px;
+        border: 5px solid #fff;
+      }
+
+      .container4 {
+        display: flex;
+        justify-content: space-around;
+        width: 1000px;
+        border: 5px solid #fff;
+      }
+
+      .container5 {
+        display: flex;
+        justify-content: space-between;
+        width: 1000px;
+        border: 5px solid #fff;
+      }
+
+      .container6 {
+        display: flex;
+        justify-content: space-evenly;
+        width: 1000px;
+        border: 5px solid #fff;
+      }
+
+      .container7 {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        width: 1000px;
+        border: 5px solid #fff;
+      }
+
+      .container8 {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        gap: 20px;
+        width: 1000px;
+        border: 5px solid #fff;
+      }
+
+      .container9 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        width: 1000px;
+        border: 5px solid #fff;
+      }
+
+      .container10 {
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        gap: 20px;
+        width: 1000px;
+        border: 5px solid #fff;
+      }
+
+      .container11 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        width: 500px;
+        height: 500px;
+        border: 5px solid #fff;
+      }
+
+      .container12 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        width: 500px;
+        height: 500px;
+        border: 5px solid #fff;
+      }
+
+      .rect {
+        flex-basis: 100px;
+        height: 100px;
+        border-radius: 5px;
+      }
+
+      .rect-col {
+        width: 100px;
+        flex-basis: 100px;
+        border-radius: 5px;
+      }
+
+      .rect:nth-child(1),
+      .rect-col:nth-child(1) {
+        background: red;
+      }
+
+      .rect:nth-child(2),
+      .rect-col:nth-child(2) {
+        background: green;
+      }
+
+      .rect:nth-child(3),
+      .rect-col:nth-child(3) {
+        background: blue;
+      }
+
+      .rectA {
+        flex-basis: 100px;
+        height: 100px;
+        background: red;
+        border-radius: 5px;
+      }
+
+      .rectB {
+        flex-basis: 100px;
+        height: 50px;
+        background: green;
+        border-radius: 5px;
+      }
+
+      .rectC {
+        flex-basis: 100px;
+        height: 70px;
+        background: blue;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-note">
+      <h1>Flex Direction</h1>
+      <ul>
+        <li>Main axis: justify-content</li>
+        <li>Cross axis: align-items</li>
+      </ul>
+    </div>
+
+    <h1>justify-content: start; (default)</h1>
+    <div class="container1">
+      <div class="rect">1</div>
+      <div class="rect">2</div>
+      <div class="rect">3</div>
+    </div>
+
+    <h1>justify-content: center;</h1>
+    <div class="container2">
+      <div class="rect">1</div>
+      <div class="rect">2</div>
+      <div class="rect">3</div>
+    </div>
+
+    <h1>justify-content: end;</h1>
+    <div class="container3">
+      <div class="rect">1</div>
+      <div class="rect">2</div>
+      <div class="rect">3</div>
+    </div>
+
+    <h1>justify-content: space-around;</h1>
+    <div class="container4">
+      <div class="rect">1</div>
+      <div class="rect">2</div>
+      <div class="rect">3</div>
+    </div>
+
+    <h1>justify-content: space-between;</h1>
+    <div class="container5">
+      <div class="rect">1</div>
+      <div class="rect">2</div>
+      <div class="rect">3</div>
+    </div>
+
+    <h1>justify-content: space-evenly;</h1>
+    <div class="container6">
+      <div class="rect">1</div>
+      <div class="rect">2</div>
+      <div class="rect">3</div>
+    </div>
+
+    <h1>justify-content: center ; gap: 20px</h1>
+    <div class="container7">
+      <div class="rect">1</div>
+      <div class="rect">2</div>
+      <div class="rect">3</div>
+    </div>
+
+    <h1>align-items: start (default)</h1>
+    <div class="container8">
+      <div class="rectA">1</div>
+      <div class="rectB">2</div>
+      <div class="rectC">3</div>
+    </div>
+
+    <h1>align-items: center</h1>
+    <div class="container9">
+      <div class="rectA">1</div>
+      <div class="rectB">2</div>
+      <div class="rectC">3</div>
+    </div>
+
+    <h1>align-items: end</h1>
+    <div class="container10">
+      <div class="rectA">1</div>
+      <div class="rectB">2</div>
+      <div class="rectC">3</div>
+    </div>
+
+    <h1>row (default) ; justify-content: center ; align-items: center</h1>
+    <div class="container11">
+      <div class="rect">1</div>
+      <div class="rect">2</div>
+      <div class="rect">3</div>
+    </div>
+
+    <h1>column ; justify-content: center ; align-items: center</h1>
+    <div class="container12">
+      <div class="rect-col">1</div>
+      <div class="rect-col">2</div>
+      <div class="rect-col">3</div>
+    </div>
+  </body>
+</html>

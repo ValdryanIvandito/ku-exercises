@@ -1,0 +1,23 @@
+.button {
+  padding: 13px 20px;
+  border-radius: 8px;
+  border: 1px solid #1e1e1e;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+  background: #1e1e1e;
+  color: #fff;
+}
+
+/* Button Size */
+.button.small {
+  padding: 9px 16px;
+  font-size: 14px;
+}
+
+/* Button Color */
+.button.outline {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  color: #1f2937;
+}

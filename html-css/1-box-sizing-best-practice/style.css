@@ -1,0 +1,36 @@
+/* Without box-sizing: border-box; */
+/* .rectangle {
+    width: 100px;
+    height: 100px;
+    background: skyblue;
+    padding-top: 20px;
+    padding-right: 20px;
+} */
+
+/* Using box-sizing: border-box;
+.rectangle {
+    width: 100px;
+    height: 100px;
+    background: skyblue;
+    padding-top: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+} */
+
+/* Best Practice to Implement box-sizing: border-box; */
+html {
+  box-sizing: border-box;
+}
+
+body,
+* {
+  box-sizing: inherit;
+}
+
+.rectangle {
+  width: 100px;
+  height: 100px;
+  background: skyblue;
+  padding-top: 20px;
+  padding-right: 20px;
+}

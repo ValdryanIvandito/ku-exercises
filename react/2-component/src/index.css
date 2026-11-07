@@ -1,0 +1,24 @@
+body {
+  background-color: lightgray;
+}
+
+.product-list {
+  display: flex;
+  gap: 12px;
+}
+
+.product {
+  padding: 12px;
+  width: 100px;
+  border: 1px solid black;
+  border-radius: 12px;
+  background-color: #fff;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 10px;
+  background-color: red;
+  color: #fff;
+}

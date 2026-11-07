@@ -1,0 +1,9 @@
+.title {
+  font-weight: 600;
+}
+
+.description {
+  font-weight: 500;
+  font-style: italic;
+  color: lightslategray;
+}

@@ -1,0 +1,163 @@
+.section {
+  padding: 60px 0;
+}
+
+.navigation-bar {
+  padding: 12px 0;
+  color: #fff;
+}
+
+.navigation-bar .column-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation-bar .navigation-bar-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation-bar .navigation-bar-content-menus ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation-bar .navigation-bar-content-menus ul li {
+  padding: 0 16px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+
+.navigation-bar .navigation-bar-content-menus ul li a {
+  text-decoration: none;
+  color: #1F2937;
+}
+
+.navigation-bar .navigation-bar-content-separator {
+  width: 1px;
+  height: 44px;
+  margin: 0 24px;
+  background: #E5E7EB;
+}
+
+.navigation-bar .navigation-bar-content-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.section-hero {
+  padding: 143px 0;
+  color: #fff;
+  background-image: url("../assets/bg-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.section-hero .column-container {
+  max-width: 592px;
+  max-height: 401px;
+}
+
+.section-hero .eyebrow {
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.section-hero h1 {
+  margin-bottom: 18px;
+  font-family: "Inter-Tight", sans-serif;
+
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.section-hero .description {
+  max-width: 450px;
+  max-height: 75px;
+  margin-bottom: 32px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.section-clients p {
+  margin-bottom: 32px;
+  font-size: 24px;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+.section-clients ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.section-clients .client-list .client-item .logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 267px;
+  height: 68px;
+  background: #F9FAFB;
+}
+
+.section-clients .client-list .client-item .logo-container img {
+  margin: 18px auto;
+}
+
+.section-services .services-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+
+.section-services .eyebrow {
+  margin-bottom: 24px;
+}
+
+.section-services h2 {
+  margin-bottom: 24px;
+}
+
+.section-services ul {
+  margin-bottom: 24px;
+  color: #374151;
+}
+
+.section-services .service-item {
+  display: flex;
+  align-items: start;
+  gap: 12px;
+}
+
+.section-services .service-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.section-services hr {
+  margin-bottom: 24px;
+  height: 1px; 
+  color: #E5E7EB;
+}
+
+.section-services .description {
+  margin-bottom: 24px;
+  color: #374151;
+}
+
+.section-services .photo-container img {
+  aspect-ratio: 524 / 500;
+  border-radius: 6px;
+}

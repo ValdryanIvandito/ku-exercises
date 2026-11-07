@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Flex Shrink</title>
+
+    <style>
+      body {
+        background: black;
+      }
+
+      .container {
+        display: flex;
+        width: 340px;
+        border: 5px solid #fff;
+      }
+
+      .rect {
+        height: 100px;
+        font-size: 50px;
+        font-weight: 600px;
+        color: #fff;
+      }
+
+      .rect:nth-child(1) {
+        background: red;
+        flex-basis: 100px;
+        flex-shrink: 1;
+      }
+
+      .rect:nth-child(2) {
+        background: green;
+        flex-basis: 200px;
+        flex-shrink: 2;
+      }
+
+      .rect:nth-child(3) {
+        background: blue;
+        flex-basis: 100px;
+        flex-shrink: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="rect">1</div>
+      <div class="rect">2</div>
+      <div class="rect">3</div>
+    </div>
+  </body>
+</html>

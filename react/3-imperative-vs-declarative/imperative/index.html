@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Imperative Paradigm</title>
+  </head>
+  <body>
+    <div class="root"></div>
+
+    <script>
+      /*
+        Imperative Programming is 
+      */
+
+      const root = document.getElementsByClassName("root")[0];
+      const btn = document.createElement("button");
+      const label = document.createElement("p");
+      
+      label.textContent = "ON";
+
+      btn.append(label);
+      root.append(btn);
+
+      btn.addEventListener("click", () => {
+        label.textContent === "ON"
+          ? (label.textContent = "OFF")
+          : (label.textContent = "ON");
+      });
+    </script>
+  </body>
+</html>

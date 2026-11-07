@@ -1,0 +1,13 @@
+.eyebrow {
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 1px;
+  color: #DBA558;
+}
+
+.text-regular {
+  font-size: 16px;
+  font-weight: 400;
+  color: #6B7280;
+}

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Element Example-1</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.production.min.js"
+    ></script>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+    ></script>
+
+    <script>
+      const vdom1 = {
+        $$typeof: Symbol.for("react.element"),
+        type: "ul",
+        ref: null,
+        props: {
+          className: "task-list",
+          children: [
+            {
+              $$typeof: Symbol.for("react.element"),
+              type: "li",
+              ref: null,
+              props: {
+                className: "task-item",
+                children: "Do grocery",
+              },
+            },
+            {
+              $$typeof: Symbol.for("react.element"),
+              type: "li",
+              ref: null,
+              props: {
+                className: "task-item",
+                children: "Feed cat",
+              },
+            },
+            {
+              $$typeof: Symbol.for("react.element"),
+              type: "li",
+              ref: null,
+              props: {
+                className: "task-item",
+                children: "Dating with my wife",
+              },
+            },
+          ],
+        },
+      };
+
+      const vdom2 = {
+        $$typeof: Symbol.for("react.element"),
+        type: "ul",
+        ref: null,
+        props: {
+          className: "task-list",
+          children: [
+            {
+              $$typeof: Symbol.for("react.element"),
+              type: "li",
+              ref: null,
+              props: {
+                className: "task-item",
+                children: "Do grocery",
+              },
+            },
+            {
+              $$typeof: Symbol.for("react.element"),
+              type: "li",
+              ref: null,
+              props: {
+                className: "task-item",
+                children: "Feed dog",
+              },
+            },
+            {
+              $$typeof: Symbol.for("react.element"),
+              type: "li",
+              ref: null,
+              props: {
+                className: "task-item",
+                children: "Dating with my wife",
+              },
+            },
+          ],
+        },
+      };
+
+      const rootElement = document.getElementById("root");
+      const reactRoot = ReactDOM.createRoot(rootElement);
+
+      reactRoot.render(vdom1);
+
+      // Open inspect -> console, wait after 3 seconds to observe how reconciliation algorithm work
+      setTimeout(() => {
+        reactRoot.render(vdom2);
+      }, 3000);
+    </script>
+  </body>
+</html>

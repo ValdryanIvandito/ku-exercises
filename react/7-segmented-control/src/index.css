@@ -1,0 +1,43 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+  font-family: Inter, Arial, sans-serif;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+.segmented-control {
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  border-radius: 8px;
+  background-color: #f4f4f4;
+}
+
+.segmented-control__segment {
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #a4a4a4;
+  cursor: pointer;
+}
+
+.segmented-control__segment--selected {
+  background-color: #fff;
+  color: #1e1e1e;
+}
