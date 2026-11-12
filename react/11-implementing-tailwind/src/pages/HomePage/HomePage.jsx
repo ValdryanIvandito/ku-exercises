@@ -167,7 +167,7 @@ export class HomePage extends React.Component {
                 onSelectSegment={this.handleSelectStatus}
               />
             </div>
-            <div className="h-[359px] rounded-b-2xl border-x border-b border-neutral-100 bg-white p-3 overflow-y-auto">
+            <div className="h-89.75 rounded-b-2xl border-x border-b border-neutral-100 bg-white p-3 overflow-y-auto">
               <TaskList
                 statusEnum={StatusEnum}
                 status={this.state.selectedStatus}

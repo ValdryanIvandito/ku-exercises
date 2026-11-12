@@ -25,14 +25,15 @@ export class SegmentedControl extends React.Component {
     this.props.segments;
 
     return (
-      <div className="bg-canvas flex w-59 items-center justify-center rounded-lg border-black p-1">
+      <div className="bg-canvas flex-inline w-fit items-center justify-center rounded-lg border-black p-1">
         {this.props.segments.map((segment, index) => {
           return (
             <button
               key={index}
               className={cn(
                 "bg-canvas cursor-pointer rounded-md px-3.5 py-1.25 font-medium text-neutral-400",
-                index === Number(this.props.selectedIndex) && "drop-shadow-soft bg-white text-neutral-900",
+                index === Number(this.props.selectedIndex) &&
+                  "drop-shadow-soft bg-white text-neutral-900",
               )}
               data-index={index}
               onClick={this.handleClickSegment}
