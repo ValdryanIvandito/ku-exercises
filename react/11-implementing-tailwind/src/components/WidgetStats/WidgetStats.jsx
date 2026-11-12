@@ -1,4 +1,5 @@
 import React from "react";
+import { cn } from "@/utils/ui";
 
 /**
  * @typedef {Object} WidgetStatsProps
@@ -17,7 +18,11 @@ export class WidgetStats extends React.Component {
   render() {
     return (
       <div
-        className={`w-full rounded-xl p-3 font-semibold ${this.props.textColor} ${this.props.bgColor}`}
+        className={cn(
+          "w-full rounded-xl p-3 font-semibold",
+          this.props.textColor,
+          this.props.bgColor,
+        )}
       >
         {this.props.icon}
         <div className="flex items-end justify-between">

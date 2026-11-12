@@ -1,6 +1,7 @@
 import React from "react";
-import iconPenLine from "@/assets/images/icon-pen-line.svg";
+import { cn } from "@/utils/ui";
 import { IconPlus } from "@/components/Icon";
+import iconPenLine from "@/assets/images/icon-pen-line.svg";
 
 /**
  * @typedef {Object} InputControlProps
@@ -41,11 +42,6 @@ export class InputControl extends React.Component {
     const iconPlusActive = rootStyles.getPropertyValue("--color-neutral-200");
     const iconPlusDisable = rootStyles.getPropertyValue("--color-white");
 
-    const btnActive =
-      "bg-ink flex items-center justify-center rounded-lg px-2.5 py-1.5 text-white";
-    const btnDisable =
-      "shadow-soft flex items-center justify-center rounded-lg px-2.5 py-1.5 text-neutral-200";
-
     return (
       <div className="flex items-center justify-between">
         <div className="flex w-full items-center gap-3">
@@ -61,12 +57,19 @@ export class InputControl extends React.Component {
         </div>
 
         <button
-          className={this.props.value ? btnActive : btnDisable}
+          className={cn(
+            "flex items-center justify-center rounded-lg px-2.5 py-1.5",
+            this.props.value
+              ? "bg-ink text-white"
+              : "shadow-soft text-neutral-200",
+          )}
           type="button"
           disabled={!this.props.value}
           onClick={this.handleAddTask}
         >
-          <IconPlus color={!this.props.value ? iconPlusActive : iconPlusDisable} />
+          <IconPlus
+            color={!this.props.value ? iconPlusActive : iconPlusDisable}
+          />
           Add
         </button>
       </div>

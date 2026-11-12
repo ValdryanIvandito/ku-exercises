@@ -15,7 +15,7 @@ import React from "react";
 export class TaskEmpty extends React.Component {
   render() {
     return (
-      <div className="flex flex-col items-center justify-center py-12 text-center">
+      <div className="flex h-full flex-col items-center justify-center py-12 text-center">
         <img src={this.props.icon} alt={this.props.iconDesc} />
         <h3 className="mt-3 font-semibold text-neutral-900">
           {this.props.title}

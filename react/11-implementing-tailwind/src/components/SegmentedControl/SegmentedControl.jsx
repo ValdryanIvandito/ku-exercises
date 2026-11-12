@@ -1,4 +1,5 @@
 import React from "react";
+import { cn } from "@/utils/ui";
 
 /**
  * @typedef {Object} SegmentedControlProps
@@ -26,16 +27,13 @@ export class SegmentedControl extends React.Component {
     return (
       <div className="bg-canvas flex w-59 items-center justify-center rounded-lg border-black p-1">
         {this.props.segments.map((segment, index) => {
-          let segmentStyle =
-            "bg-canvas rounded-md cursor-pointer px-3.5 py-1.25 font-medium text-neutral-400";
-
-          if (index === Number(this.props.selectedIndex))
-            segmentStyle += ` text-neutral-900 bg-white drop-shadow-soft`;
-
           return (
             <button
               key={index}
-              className={segmentStyle}
+              className={cn(
+                "bg-canvas cursor-pointer rounded-md px-3.5 py-1.25 font-medium text-neutral-400",
+                index === Number(this.props.selectedIndex) && "drop-shadow-soft bg-white text-neutral-900",
+              )}
               data-index={index}
               onClick={this.handleClickSegment}
             >
