@@ -7,6 +7,8 @@
   optimize property access (hidden classes, inline caching).
 */
 
+// EXAMPLE-1 HOW TO USE CLASS - IMPLEMENTING PROTOTYPE CHAIN - IMPLEMENTING CLASS FIELD
+
 class Color {
   color; // declared upfront; constructor supplies the actual value
 
@@ -67,3 +69,38 @@ console.log(rectangle.getColor()); // Output: "color: silver"
 
 console.log(circle.getArea()); // Output: ~153.94
 console.log(circle.getColor()); // Output: "color: gold"
+
+// =======================================================================================================
+console.log("\n");
+// =======================================================================================================
+
+// EXAMPLE-2 HOW TO USE CLASS - IMPLEMENTING SET AND GET
+
+class Person {
+  constructor(name) {
+    /*
+      Must use '_name' to distinguish the internal property 
+      from the getter and setter property
+    */
+   
+    this._name = name;
+  }
+
+  get name() {
+    return this._name;
+  }
+
+  set name(newName) {
+    this._name = newName;
+  }
+}
+
+const person = new Person("Ryan");
+
+// Get current name
+console.log(person.name);
+
+// Set a new name
+person.name = "Valdryan";
+console.log(person.name);
+
