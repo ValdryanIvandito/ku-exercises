@@ -146,7 +146,11 @@ export class HomePage extends React.Component {
       <div className="flex min-h-svh items-center justify-center">
         <div className="w-125 rounded-3xl border-2 border-white">
           <section className="px-4.5 pt-4.5 pb-2.5">
-            <WidgetStatsBar numOfTask={0} numOfActive={0} numOfCompleted={0} />
+            <WidgetStatsBar
+              numOfTask={this.state.numOfTask}
+              numOfActive={this.state.numOfActive}
+              numOfCompleted={this.state.numOfCompleted}
+            />
           </section>
 
           <section className="px-4.5 py-3">
