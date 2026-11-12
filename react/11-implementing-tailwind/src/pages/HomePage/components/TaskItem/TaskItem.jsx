@@ -93,7 +93,7 @@ export class TaskItem extends React.Component {
         )}
       >
         <div className="flex w-full items-center gap-3">
-          <checkbox
+          <div
             className={cn(
               "h-5 w-5 cursor-pointer rounded-md",
               this.props.task.isActive
@@ -102,7 +102,7 @@ export class TaskItem extends React.Component {
             )}
             data-index={this.props.task.id}
             onClick={this.handleCheckTask}
-          ></checkbox>
+          ></div>
           {this.state.toggleView && this.state.isEdit ? (
             <input
               className="border-accent-blue rounded-lg border px-2 py-1"
