@@ -2,9 +2,15 @@ import React from "react";
 import { cn } from "@/utils/ui";
 
 /**
+ * @typedef {Object} Segment
+ * @property {string} value
+ * @property {string} label
+ */
+
+/**
  * @typedef {Object} SegmentedControlProps
- * @prop {string[]} segments
- * @prop {number} selectedIndex
+ * @prop {Segment[]} segments
+ * @prop {string} value
  * @prop {(index: number) => void} onSelectSegment
  */
 
@@ -13,32 +19,22 @@ import { cn } from "@/utils/ui";
  */
 
 export class SegmentedControl extends React.Component {
-  /**
-   * @param {React.MouseEvent<HTMLButtonElement>} event
-   */
-
-  handleClickSegment = (event) => {
-    this.props.onSelectSegment(event.currentTarget.dataset.index);
-  };
-
   render() {
     this.props.segments;
 
     return (
-      <div className="bg-canvas flex-inline w-fit items-center justify-center rounded-lg border-black p-1">
-        {this.props.segments.map((segment, index) => {
+      <div className="bg-surface-muted text-placeholder inline-flex w-fit items-center justify-center rounded-lg p-1 text-base font-medium">
+        {this.props.segments.map((segment) => {
           return (
             <button
-              key={index}
-              className={cn(
-                "bg-canvas cursor-pointer rounded-md px-3.5 py-1.25 font-medium text-neutral-400",
-                index === Number(this.props.selectedIndex) &&
-                  "drop-shadow-soft bg-white text-neutral-900",
-              )}
-              data-index={index}
-              onClick={this.handleClickSegment}
+              key={segment.value}
+              className={cn("rounded-md border-0 px-3.5 py-1.25", {
+                "bg-white": segment.value === this.props.value,
+                "text-neutral-900": segment.value === this.props.value,
+              })}
+              onClick={() => this.props.onSelectSegment(segment)}
             >
-              {segment}
+              {segment.label}
             </button>
           );
         })}

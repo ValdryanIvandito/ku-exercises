@@ -4,27 +4,25 @@ import { InputControl } from "./components/InputControl/InputControl";
 import { TaskList } from "./components/TaskList/TaskList";
 import { SegmentedControl } from "@/components/SegmentedControl/SegmentedControl";
 
-const StatusEnum = Object.freeze({
+const Status = Object.freeze({
   ALL: 0,
   ACTIVE: 1,
   COMPLETED: 2,
 });
 
-const StatusLabel = {
-  [StatusEnum.ALL]: "All",
-  [StatusEnum.ACTIVE]: "Active",
-  [StatusEnum.COMPLETED]: "Completed",
-};
+/**
+ * @type {import ('../../components/SegmentedControl'.Segment)[]}
+ */
 
-const statusList = [
-  StatusLabel[StatusEnum.ALL],
-  StatusLabel[StatusEnum.ACTIVE],
-  StatusLabel[StatusEnum.COMPLETED],
+const STATUS_SEGMENTS = [
+  { value: Status.ALL, label: "All" },
+  { value: Status.ACTIVE, label: "Active" },
+  { value: Status.COMPLETED, label: "Completed" },
 ];
 
 export class HomePage extends React.Component {
   state = {
-    selectedStatus: StatusEnum.ALL,
+    selectedStatus: Status.ALL,
     numOfTask: 0,
     numOfActive: 0,
     numOfCompleted: 0,
@@ -63,11 +61,11 @@ export class HomePage extends React.Component {
   };
 
   /**
-   * @param {number} index
+   * @type {(segment: import ('../../components/SegmentedControl'.Segment)[]) => void}
    */
 
-  handleSelectStatus = (index) => {
-    this.setState({ selectedStatus: index });
+  handleSelectStatus = (segment) => {
+    this.setState({ selectedStatus: segment.value });
   };
 
   /**
@@ -162,14 +160,14 @@ export class HomePage extends React.Component {
           <section className="px-2 pb-2">
             <div className="rounded-t-2xl border border-neutral-100 bg-white p-3">
               <SegmentedControl
-                segments={statusList}
-                selectedIndex={this.state.selectedStatus}
+                segments={STATUS_SEGMENTS}
+                value={this.state.selectedStatus}
                 onSelectSegment={this.handleSelectStatus}
               />
             </div>
-            <div className="h-89.75 rounded-b-2xl border-x border-b border-neutral-100 bg-white p-3 overflow-y-auto">
+            <div className="h-89.75 overflow-y-auto rounded-b-2xl border-x border-b border-neutral-100 bg-white p-3">
               <TaskList
-                statusEnum={StatusEnum}
+                statusEnum={Status}
                 status={this.state.selectedStatus}
                 data={this.state.taskList}
                 onChecked={this.handleCheckedTask}
