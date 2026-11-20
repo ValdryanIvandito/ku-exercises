@@ -1,3 +1,11 @@
+/*
+  METHOD => Promise.any()
+
+  BEHAVIOR => Resolves as soon as the first promise fulfills, ignoring earlier rejections.
+
+  WHEN IT REJECTS => Only if all input promises reject (throws an AggregateError).
+*/
+
 const promise1 = new Promise((resolve, reject) => {
   setTimeout(() => {
     const msg = "Task-1";

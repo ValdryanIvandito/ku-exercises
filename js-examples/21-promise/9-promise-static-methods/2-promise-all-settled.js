@@ -1,3 +1,11 @@
+/*
+  METHOD => Promise.allSettled()
+
+  BEHAVIOR => Waits for all promises to finish and returns an array of objects describing each outcome (status and value/reason).
+
+  WHEN IT REJECTS => Never rejects (always fulfills once all tasks complete).
+*/
+
 const promise1 = new Promise((resolve, reject) => {
   setTimeout(() => {
     const msg = "Task-1";

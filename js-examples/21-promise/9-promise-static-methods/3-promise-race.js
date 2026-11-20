@@ -1,3 +1,11 @@
+/*
+  METHOD => Promise.race()
+
+  BEHAVIOR => Settles as soon as the first promise settles, adopting its result or error.
+
+  REJECTS => If the fastest promise to settle happens to reject.
+*/
+
 const promise1 = new Promise((resolve, reject) => {
   setTimeout(() => {
     const msg = "Task-1";
